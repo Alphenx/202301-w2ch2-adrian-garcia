@@ -1,0 +1,23 @@
+{
+  "name": "202301-w2ch2-adrian-garcia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alphenx/202301-w2ch2-adrian-garcia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alphenx/202301-w2ch2-adrian-garcia/issues"
+  },
+  "homepage": "https://github.com/Alphenx/202301-w2ch2-adrian-garcia#readme",
+  "devDependencies": {
+    "husky": "^8.0.0"
+  }
+}
