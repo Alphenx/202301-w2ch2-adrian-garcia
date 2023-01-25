@@ -9,18 +9,25 @@
 // Cuando se comparan <valueA> y <valueB>
 // Entonces el resultado será <Result>
 
+// SI LOS DOS VALORES SON NaN -> TRUE
 function areBothValuesNaN(valueA, valueB) {
   return Number.isNaN(valueA) && Number.isNaN(valueB);
 }
 
+// SI LOS DOS VALORES SON NUMEROS ENTEROS -> TRUE
 function areIntegers(valueA, valueB) {
   return Number.isInteger(valueA) && Number.isInteger(valueB);
 }
 
+// SI LOS DOS VALORES SON NUMEROS ENTEROS y ademas 0 o -0 -> TRUE
 function isStrictZero(valueA, valueB) {
   return areIntegers(valueA, valueB) && !valueA && !valueB;
 }
 
+// OBJECT.IS() funciona como === excepto para valores NaN y 0/-0
+// Todos los posibles valores entrarian en la primera condicion Object.is(valueA, valueB),
+// excepto NaN que entraría en la segunda !areBothValuesNaN(valueA, valueB)) y
+// por último 0 y -0 que entrarian en isStrictZero(valueA, valueB)
 function strictEquals(valueA, valueB) {
   return (
     (Object.is(valueA, valueB) && !areBothValuesNaN(valueA, valueB)) ||
