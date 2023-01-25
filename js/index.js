@@ -28,7 +28,7 @@ function isStrictZero(valueA, valueB) {
 // Todos los posibles valores entrarian en la primera condicion Object.is(valueA, valueB),
 // excepto NaN que entraría en la segunda !areBothValuesNaN(valueA, valueB)) y
 // por último 0 y -0 que entrarian en isStrictZero(valueA, valueB)
-function strictEquals(valueA, valueB) {
+export function strictEquals(valueA, valueB) {
   return (
     (Object.is(valueA, valueB) && !areBothValuesNaN(valueA, valueB)) ||
     isStrictZero(valueA, valueB)
