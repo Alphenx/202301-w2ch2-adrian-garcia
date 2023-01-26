@@ -1,4 +1,4 @@
-function isStringWithoutSpaces(myString) {
+function isPalindrome(myString) {
   if (typeof myString !== "string" || !isNaN(myString)) {
     return new Error("Text not provided");
   } else {
@@ -10,22 +10,18 @@ function isStringWithoutSpaces(myString) {
 
     let reversedString = myNewString.split("").reverse().join("");
 
-    if (reversedString === myNewString) {
-      return "Es un palíndromo";
-    } else {
-      return "No es un palíndromo";
-    }
+    return reversedString === myNewString;
   }
 }
 
-console.log(isStringWithoutSpaces("Holá qué tal"));
-console.log(isStringWithoutSpaces("Holá qué tal"));
-console.log(isStringWithoutSpaces("Holá qué tal"));
-console.log(isStringWithoutSpaces("anas"));
-console.log(isStringWithoutSpaces("aná"));
-console.log(isStringWithoutSpaces("ana"));
-console.log(isStringWithoutSpaces("ana__"));
-console.log(isStringWithoutSpaces("a na__"));
-console.log(isStringWithoutSpaces(""));
-console.log(isStringWithoutSpaces(2324));
-console.log(isStringWithoutSpaces("2432"));
+console.log(isPalindrome("Holá qué tal"));
+console.log(isPalindrome("Holá qué tal"));
+console.log(isPalindrome("Holá qué tal"));
+console.log(isPalindrome("anas"));
+console.log(isPalindrome("aná"));
+console.log(isPalindrome("ana"));
+console.log(isPalindrome("ana__"));
+console.log(isPalindrome("a na__"));
+console.log(isPalindrome(""));
+console.log(isPalindrome(2324));
+console.log(isPalindrome("2432"));
